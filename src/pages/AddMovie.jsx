@@ -73,74 +73,82 @@ const AddMovie = () => {
           <FiArrowLeft className="text-white" size={25} />
         </Link>
       </div>
-      <div>
-        <img src={image} className="h-[200px] w-full object-cover object-top" />
-      </div>
-      <form className="w-full flex flex-col gap-2 mt-0 " onSubmit={createMovie}>
-        <Input
-          type="text"
-          placeholder="Title"
-          className="outline-0"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <Input
-          type="text"
-          placeholder="Category (seperated by commas)"
-          className="outline-0"
-          value={category}
-          onChange={handleCat}
-        />
-        <Input
-          type="text"
-          placeholder="Slug"
-          className="outline-0"
-          value={slug}
-          onChange={(e) => setSlug(e.target.value)}
-        />
-        <Input
-          type="number"
-          placeholder="Rate 1-5"
-          className="outline-0"
-          value={stars}
-          onChange={(e) => setStars(e.target.value)}
-        />
-        <Input
-          type="number"
-          placeholder="Year"
-          className="outline-0"
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
-        />
-        <Input
-          type="text"
-          placeholder="Thumbnail (Link)"
-          className="outline-0"
-          value={thumbnail}
-          onChange={onChangeThumbnail}
-        />
-        <Input
-          type="text"
-          placeholder="Movie (Link)"
-          className="outline-0"
-          value={link}
-          onChange={(e) => setLink(e.target.value)}
-        />
+      <div className="md:flex gap-2">
+        <div>
+          <img
+            src={image}
+            className="h-[200px] w-full object-cover object-top md:h-[530px] md:rounded-md"
+          />
+        </div>
+        <form
+          className="w-full flex flex-col gap-2 mt-0 "
+          onSubmit={createMovie}
+        >
+          <Input
+            type="text"
+            placeholder="Title"
+            className="outline-0"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <Input
+            type="text"
+            placeholder="Category (seperated by commas)"
+            className="outline-0"
+            value={category}
+            onChange={handleCat}
+          />
+          <Input
+            type="text"
+            placeholder="Slug"
+            className="outline-0"
+            value={slug}
+            onChange={(e) => setSlug(e.target.value)}
+          />
+          <Input
+            type="number"
+            placeholder="Rate 1-5"
+            className="outline-0"
+            value={stars}
+            onChange={(e) => setStars(e.target.value)}
+          />
+          <Input
+            type="number"
+            placeholder="Year"
+            className="outline-0"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          />
+          <Input
+            type="text"
+            placeholder="Thumbnail (Link)"
+            className="outline-0"
+            value={thumbnail}
+            onChange={onChangeThumbnail}
+          />
+          <Input
+            type="text"
+            placeholder="Movie (Link)"
+            className="outline-0"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+          />
 
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          name="name"
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Description"
-          className="pl-3 w-full outline-0 bg-stone-300/10 py-2 resize-none h-[130px]"
-        ></textarea>
-        <button className="bg-[#FC4F03] w-full py-2 rounded-full mt-3 shadow-lg shadow-[#FC4F03]/50  text-center">
-          Add movie
-        </button>
-      </form>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            name="name"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Description"
+            className="pl-3 w-full outline-0 bg-stone-300/10 py-2 resize-none h-[130px]"
+          ></textarea>
+          <button className="bg-[#FC4F03] w-full py-2 rounded-full mt-3 shadow-lg shadow-[#FC4F03]/50  text-center">
+            Add movie
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
